@@ -1,25 +1,13 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import CoursesCap from './Components/CoursesCap'
+import CoursesRows from './Components/CoursesRows'
 
-function App() {
+export function App(props){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-sm">
+      <CoursesCap/>
+      <CoursesRows courses={props.data}/>
     </div>
   );
 }
-
-export default App;

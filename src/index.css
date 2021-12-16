@@ -3,11 +3,144 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.cap{
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cap span{
+  margin: 10px;
+}
+
+.question{
+  border-radius: 50%;
+}
+
+.cap_text{
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.courses_unit{
+  margin-bottom: 25px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+}
+
+.courses_numeration{
+  min-width: 35px;
+  background: #007BFF;
+  font-weight: 300;
+  font-size: 28px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.course_info{
+  display: flex;
+  flex-direction: column;
+  color: #333333;
+  width: 100%;
+  position: relative;
+}
+
+.top_line{
+  width: 100%;
+  height: 2px;
+  background: #007BFF;
+}
+
+.courses_name{
+  width: 100%;
+  font-weight: normal;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 0 10px;
+  margin-left: 5px;
+}
+
+.courses_name:active, /* активная/посещенная ссылка */
+.courses_name:hover,  /* при наведении */
+.courses_name {
+  text-decoration: none;
+  color: black;
+}
+
+.courses_name:hover{
+  box-shadow: 0 0 5px black;
+}
+
+.courses_author{
+  font-weight: 300;
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+.courses_rating_number{
+  font-weight: 300;
+  font-size: 18px;
+  margin-left: 15px;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.courses_image img{
+
+}
+
+.courses_image{
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.rating_image{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+@media(max-width: 992px){
+  .courses_image img{
+    width: 130px;
+    height: auto;
+  }
+  .courses_name{
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 768px){
+  .courses_name{
+    font-size: 18px;
+    display: inline-block!important;
+  }
+  .courses_author{
+    font-size: 16px;
+  }
+  .courses_rating_number{
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 576px){
+  .cap_text{
+    font-size: 24px;
+  }
 }
